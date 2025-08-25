@@ -40,7 +40,7 @@ def Chat(request):
 
             # Get response from AI agent (now includes user_email parameter)
             ai_response = agent.ask(query, session_id=session_id, user_email=user_email)
-            agent.refresh_session_data(session_id, user_email)
+            # agent.refresh_session_data(session_id, user_email)
 
             return JsonResponse({
                 # "message": f"Hey {user_email}, here is the bot response:{session_id}",
